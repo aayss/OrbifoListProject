@@ -10,52 +10,72 @@ import UIKit
 import Alamofire
 
 
-class TransactionTableViewController: UITableViewController {
+class TransactionTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
     
     var transactionVM = TransactionViewModel()
+    var refreshControl = UIRefreshControl()
+    
+    @IBOutlet var tableView: UITableView!
+    
+    
     private var pagination: Pagination?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+
+        
         
         transactionVM.fetchTransactions(eraseData: false)
   
         transactionVM.updateTransactionList = { [weak self] in
-            
+            if self?.refreshControl.isRefreshing ?? false {
+                self?.refreshControl.endRefreshing()
+            }
             self?.tableView.reloadData()
         }
        
     }
   
-
-   
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    @objc func refresh(_ sender: AnyObject) {
+       
+       transactionVM.fetchTransactions(eraseData: true)
     }
+  
+  
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactionVM.itemsCount()
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCELL", for: indexPath) as? TransactionCell else {
             fatalError("TransactionCell not found!")
         }
-        
-       // let transactionViewModel = transactionVM.itemAt(indexPath: indexPath)
-        
+
         if let transaction = transactionVM.itemAt(indexPath: indexPath) {
             cell.transaction = transaction
-           // cell.Title.text = transaction.merchant?.name
-            
+
         }
-        
+
         return cell
     }
-    
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        transactionVM.checkAndReloadIfNeeded(for: indexPath)
+    }
  
 }
+
+
+
+
 
 protocol Routable: URLRequestConvertible {
     var method: HTTPMethod { get }

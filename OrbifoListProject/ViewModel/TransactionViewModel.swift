@@ -22,6 +22,8 @@ class TransactionViewModel
         return nil
     }
   
+    var isFetchingData = false
+    
     func itemsCount() -> Int
     {
         return transaction.count
@@ -34,17 +36,23 @@ class TransactionViewModel
  
    
     func fetchTransactions(eraseData: Bool) {
-       
+        if isFetchingData {
+            return
+        }
+        isFetchingData = true
+        if itemsCount() == 0 {
+          //  isLoading = true
+        }
     
         let page = ((pagination != nil) ? pagination?.page : 1)!
 
-        getTransactions(page: page, limit: pagination?.limit ?? 20) { [weak self] (result, _) in
+        getTransactions(page: page, limit: pagination?.limit ?? 10) { [weak self] (result, _) in
           
             switch result {
             case .success(let response):
                 if let data = response.data {
 
-                    self?.pagination = Pagination(limit: response.limit ?? 20, total: response.total ?? 10000, page: response.page ?? 1)
+                    self?.pagination = Pagination(limit: response.limit ?? 10, total: response.total ?? 10000, page: response.page ?? 1)
                     self?.transaction.append(contentsOf: data)
                     self?.updateTransactionList?()
                 }
@@ -52,10 +60,16 @@ class TransactionViewModel
             case .failure:
                 print("Failed to get transactions")
             }
-            
+            self?.isFetchingData = false
         }
         
         
+    }
+    
+    func checkAndReloadIfNeeded(for indexPath: IndexPath) {
+        if indexPath.row == itemsCount() - 1 && itemsCount() < pagination?.total ?? 0 {
+            fetchTransactions(eraseData: false)
+        }
     }
 
     func getTransactions(page: Int, limit: Int, completion: @escaping (AFResult<PaginationBaseResponse<[Transactions]>>, ServerErrorResponse?) -> Void) {

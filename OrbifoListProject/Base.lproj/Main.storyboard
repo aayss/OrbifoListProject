@@ -87,6 +87,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Transactions" id="Myk-BT-Mqh"/>
+                    <connections>
+                        <outlet property="tableView" destination="y8x-Mj-tpJ" id="Q2C-J6-Pyq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOa-2x-5z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
