@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		397C3C64257A5075003676CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C63257A5075003676CB /* AppDelegate.swift */; };
 		397C3C66257A5075003676CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C65257A5075003676CB /* SceneDelegate.swift */; };
-		397C3C68257A5075003676CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C67257A5075003676CB /* ViewController.swift */; };
 		397C3C6B257A5075003676CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397C3C69257A5075003676CB /* Main.storyboard */; };
 		397C3C6D257A5077003676CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397C3C6C257A5077003676CB /* Assets.xcassets */; };
 		397C3C70257A5077003676CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397C3C6E257A5077003676CB /* LaunchScreen.storyboard */; };
+		397C3C7B257A5097003676CB /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C7A257A5097003676CB /* Transactions.swift */; };
+		397C3C7F257A5CBE003676CB /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C7E257A5CBE003676CB /* Pagination.swift */; };
+		397C3C92257A6064003676CB /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C91257A6064003676CB /* TransactionTableViewController.swift */; };
+		397C3C9A257A659E003676CB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C99257A659E003676CB /* TransactionCell.swift */; };
+		397C3CA0257A680B003676CB /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C9F257A680B003676CB /* TransactionViewModel.swift */; };
+		87F202EEA3A1840691822FA5 /* Pods_OrbifoListProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F948FDA5747D67D97E837610 /* Pods_OrbifoListProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		397C3C60257A5075003676CB /* OrbifoListProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrbifoListProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397C3C63257A5075003676CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		397C3C65257A5075003676CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		397C3C67257A5075003676CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		397C3C6A257A5075003676CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		397C3C6C257A5077003676CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		397C3C6F257A5077003676CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		397C3C71257A5077003676CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		397C3C7A257A5097003676CB /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		397C3C7E257A5CBE003676CB /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		397C3C91257A6064003676CB /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
+		397C3C99257A659E003676CB /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		397C3C9F257A680B003676CB /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		98BAE60C899BD0BF14FCF241 /* Pods-OrbifoListProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbifoListProject.release.xcconfig"; path = "Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject.release.xcconfig"; sourceTree = "<group>"; };
+		F948FDA5747D67D97E837610 /* Pods_OrbifoListProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrbifoListProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2FECC101E32B10A748BAEB /* Pods-OrbifoListProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbifoListProject.debug.xcconfig"; path = "Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F202EEA3A1840691822FA5 /* Pods_OrbifoListProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				397C3C62257A5075003676CB /* OrbifoListProject */,
 				397C3C61257A5075003676CB /* Products */,
+				7AABADCBF69BB03FC4E8E7A8 /* Pods */,
+				AF55C0B51B46EEAFCED3FDAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +71,68 @@
 		397C3C62257A5075003676CB /* OrbifoListProject */ = {
 			isa = PBXGroup;
 			children = (
+				397C3C9E257A67F5003676CB /* ViewModel */,
+				397C3C98257A6591003676CB /* Cells */,
+				397C3C8B257A5DE5003676CB /* View */,
+				397C3C78257A507E003676CB /* Model */,
 				397C3C63257A5075003676CB /* AppDelegate.swift */,
 				397C3C65257A5075003676CB /* SceneDelegate.swift */,
-				397C3C67257A5075003676CB /* ViewController.swift */,
 				397C3C69257A5075003676CB /* Main.storyboard */,
 				397C3C6C257A5077003676CB /* Assets.xcassets */,
 				397C3C6E257A5077003676CB /* LaunchScreen.storyboard */,
 				397C3C71257A5077003676CB /* Info.plist */,
 			);
 			path = OrbifoListProject;
+			sourceTree = "<group>";
+		};
+		397C3C78257A507E003676CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				397C3C7A257A5097003676CB /* Transactions.swift */,
+				397C3C7E257A5CBE003676CB /* Pagination.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		397C3C8B257A5DE5003676CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				397C3C91257A6064003676CB /* TransactionTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		397C3C98257A6591003676CB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				397C3C99257A659E003676CB /* TransactionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		397C3C9E257A67F5003676CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				397C3C9F257A680B003676CB /* TransactionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7AABADCBF69BB03FC4E8E7A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE2FECC101E32B10A748BAEB /* Pods-OrbifoListProject.debug.xcconfig */,
+				98BAE60C899BD0BF14FCF241 /* Pods-OrbifoListProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF55C0B51B46EEAFCED3FDAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F948FDA5747D67D97E837610 /* Pods_OrbifoListProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 397C3C74257A5077003676CB /* Build configuration list for PBXNativeTarget "OrbifoListProject" */;
 			buildPhases = (
+				E9A483B0543B8DCB5F9C2A3C /* [CP] Check Pods Manifest.lock */,
 				397C3C5C257A5075003676CB /* Sources */,
 				397C3C5D257A5075003676CB /* Frameworks */,
 				397C3C5E257A5075003676CB /* Resources */,
+				22627F2BC92E6428B4E8FCE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +202,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22627F2BC92E6428B4E8FCE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9A483B0543B8DCB5F9C2A3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrbifoListProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		397C3C5C257A5075003676CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				397C3C68257A5075003676CB /* ViewController.swift in Sources */,
+				397C3C9A257A659E003676CB /* TransactionCell.swift in Sources */,
 				397C3C64257A5075003676CB /* AppDelegate.swift in Sources */,
+				397C3C92257A6064003676CB /* TransactionTableViewController.swift in Sources */,
+				397C3C7F257A5CBE003676CB /* Pagination.swift in Sources */,
+				397C3C7B257A5097003676CB /* Transactions.swift in Sources */,
 				397C3C66257A5075003676CB /* SceneDelegate.swift in Sources */,
+				397C3CA0257A680B003676CB /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +399,7 @@
 		};
 		397C3C75257A5077003676CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE2FECC101E32B10A748BAEB /* Pods-OrbifoListProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +418,7 @@
 		};
 		397C3C76257A5077003676CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98BAE60C899BD0BF14FCF241 /* Pods-OrbifoListProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
