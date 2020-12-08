@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 import Alamofire
-
+import AVFoundation
+import OneSignal
 
 class TransactionTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
@@ -24,12 +25,42 @@ class TransactionTableViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+        // Push Status Methods
+        let hasPrompted = status.permissionStatus.hasPrompted
+        print("hasPrompted: ", hasPrompted)
+        let userStatus = status.permissionStatus.status
+        print("userStatus: ", userStatus)
+        let isSubscribed = status.subscriptionStatus.subscribed
+        print("isSubscribed: ", isSubscribed)
+        let userSubscriptionSetting = status.subscriptionStatus.userSubscriptionSetting
+        print("userSubscriptionSetting: ", userSubscriptionSetting)
+        if let userID = status.subscriptionStatus.userId{
+            print("userID: ", userID)
+        }
+        if let pushToken = status.subscriptionStatus.pushToken {
+            print("pushToken: ", pushToken)
+        }
+        // Email Status Methods
+        if let emailPlayerId = status.emailSubscriptionStatus.emailUserId {
+            print("emailPlayerId: ", emailPlayerId)
+        }
+        if let emailAddress = status.emailSubscriptionStatus.emailAddress {
+            print("emailAddress: ", emailAddress)
+        }
+        let isEmailSubscribed = status.emailSubscriptionStatus.subscribed
+        print("isEmailSubscribed: ", isEmailSubscribed)
+        
+//        if hasPrompted == true
+//        {
+//            self.performSegue(withIdentifier: "denemeSegue", sender: nil)
+//        }
+
+        
         
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
-
-        
         
         transactionVM.fetchTransactions(eraseData: false)
   
@@ -42,12 +73,12 @@ class TransactionTableViewController: UIViewController, UITableViewDelegate, UIT
        
     }
   
+    
     @objc func refresh(_ sender: AnyObject) {
        
        transactionVM.fetchTransactions(eraseData: true)
     }
-  
-  
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactionVM.itemsCount()
@@ -72,9 +103,6 @@ class TransactionTableViewController: UIViewController, UITableViewDelegate, UIT
     }
  
 }
-
-
-
 
 
 protocol Routable: URLRequestConvertible {

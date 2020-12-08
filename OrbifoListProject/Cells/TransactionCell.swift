@@ -23,7 +23,7 @@ class TransactionCell: UITableViewCell
             if transaction?.type == TransactionType.TOPUP {
                 logo.contentMode = .center
                 logo.image = UIImage(named: "personalWalletMedium")
-                logo.backgroundColor = .blue
+                logo.backgroundColor = .yellow
                 
                 Title?.text = "Top-up Personal Wallet"
             } else if transaction?.type == TransactionType.EMPLOYEE_TOPUP {
@@ -43,7 +43,7 @@ class TransactionCell: UITableViewCell
                     logo.contentMode = .scaleAspectFill
                
                 }
-                logo.backgroundColor = UIColor.purple
+                logo.backgroundColor = UIColor.green
                 Title?.text = transaction?.merchant?.name ?? "Unknown Merchant"
             }
 

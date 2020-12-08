@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.4.0)
+  - OneSignal (2.16.1)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 5.2)
+  - OneSignal (< 3.0, >= 2.11.2)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - OneSignal
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  OneSignal: 5f6514ec2b931306eb067acb124afbb2e49970af
 
-PODFILE CHECKSUM: 78f54aaa067593ee758a68c6ff0bd6315797bcd6
+PODFILE CHECKSUM: 8858fbc09d241be90b951bc89d37993d06c5df48
 
 COCOAPODS: 1.10.0

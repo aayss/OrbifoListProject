@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KHy-4w-w6N">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +12,7 @@
         <!--Transactions-->
         <scene sceneID="puG-l9-1wW">
             <objects>
-                <tableViewController id="gPe-oN-jOJ" customClass="TransactionTableViewController" customModule="OrbifoListProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TransactionTableViewController" id="gPe-oN-jOJ" customClass="TransactionTableViewController" customModule="OrbifoListProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="y8x-Mj-tpJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,9 +88,17 @@
                             <outlet property="delegate" destination="gPe-oN-jOJ" id="XkE-59-jFI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Transactions" id="Myk-BT-Mqh"/>
+                    <navigationItem key="navigationItem" title="Transactions" id="Myk-BT-Mqh">
+                        <barButtonItem key="rightBarButtonItem" title="QR Code" image="qrcode" catalog="system" style="done" id="mpZ-H5-3VS">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <segue destination="ZV6-nZ-K11" kind="presentation" identifier="mainToQrSegue" modalPresentationStyle="fullScreen" id="wBh-Sf-yl1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="y8x-Mj-tpJ" id="Q2C-J6-Pyq"/>
+                        <segue destination="97E-RT-zQa" kind="presentation" identifier="denemeSegue" modalPresentationStyle="fullScreen" id="47I-Cs-31o"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOa-2x-5z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -98,7 +108,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yoE-GV-g5o">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KHy-4w-w6N" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" id="KHy-4w-w6N" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hnu-Ct-qT6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -113,14 +123,61 @@
             </objects>
             <point key="canvasLocation" x="586.95652173913049" y="196.875"/>
         </scene>
+        <!--QR-->
+        <scene sceneID="rdu-eF-JTl">
+            <objects>
+                <viewController storyboardIdentifier="qrdene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="97E-RT-zQa" customClass="QRCodeScannerViewController" customModule="OrbifoListProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sfi-f8-TAf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lae-MZ-Htt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR" id="5kl-b5-1Tc">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="sxz-2X-VXN">
+                            <connections>
+                                <action selector="backAction:" destination="97E-RT-zQa" id="epV-mP-3DV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dbx-JO-0vV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3344.9275362318845" y="196.875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v1S-lI-kPj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZV6-nZ-K11" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T9t-V7-QT8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="97E-RT-zQa" kind="relationship" relationship="rootViewController" id="raG-Ab-EPf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISD-er-utJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2434.7826086956525" y="196.875"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="raG-Ab-EPf"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.down.on.square" catalog="system" width="122" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

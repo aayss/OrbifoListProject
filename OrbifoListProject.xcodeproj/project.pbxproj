@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,10 +17,42 @@
 		397C3C92257A6064003676CB /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C91257A6064003676CB /* TransactionTableViewController.swift */; };
 		397C3C9A257A659E003676CB /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C99257A659E003676CB /* TransactionCell.swift */; };
 		397C3CA0257A680B003676CB /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C3C9F257A680B003676CB /* TransactionViewModel.swift */; };
-		87F202EEA3A1840691822FA5 /* Pods_OrbifoListProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F948FDA5747D67D97E837610 /* Pods_OrbifoListProject.framework */; };
+		3981B158257F7A9A00A24012 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3981B157257F7A9A00A24012 /* NotificationService.swift */; };
+		3981B15C257F7A9A00A24012 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3981B155257F7A9A00A24012 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3989EE9B257E45B8005250C3 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989EE9A257E45B8005250C3 /* Scanner.swift */; };
+		3989EEA2257E51D1005250C3 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989EEA1257E51D1005250C3 /* QRCodeScannerViewController.swift */; };
+		39919777257FB0B800302F50 /* QRCodeScannerViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 3989EEA1257E51D1005250C3 /* QRCodeScannerViewController.swift */; };
+		39E8D7B0257E703B008CB025 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E8D7AF257E703B008CB025 /* HomeKit.framework */; };
+		86E6AF3DD50728B63E10B146 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B1EC65EF117538812B5C7C /* libPods-OneSignalNotificationServiceExtension.a */; };
+		B12F80B737B98611B125B7C0 /* libPods-OrbifoListProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B9EA51886C5F48EE051A6A /* libPods-OrbifoListProject.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3981B15A257F7A9A00A24012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 397C3C58257A5074003676CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3981B154257F7A9A00A24012;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3989EEC7257E693E005250C3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3981B15C257F7A9A00A24012 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		397C2AB3257F62B900C154C3 /* OrbifoListProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrbifoListProject.entitlements; sourceTree = "<group>"; };
 		397C3C60257A5075003676CB /* OrbifoListProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrbifoListProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397C3C63257A5075003676CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		397C3C65257A5075003676CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,8 +65,18 @@
 		397C3C91257A6064003676CB /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 		397C3C99257A659E003676CB /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		397C3C9F257A680B003676CB /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		3981B155257F7A9A00A24012 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3981B157257F7A9A00A24012 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3981B159257F7A9A00A24012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3989EE9A257E45B8005250C3 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		3989EEA1257E51D1005250C3 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		39E8D7AE257E703B008CB025 /* OrbifoListProjectRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrbifoListProjectRelease.entitlements; sourceTree = "<group>"; };
+		39E8D7AF257E703B008CB025 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		3D0DD3777BD6EB6D3942A5B8 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		3F3746F58B23FB859F744756 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		95B1EC65EF117538812B5C7C /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BAE60C899BD0BF14FCF241 /* Pods-OrbifoListProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbifoListProject.release.xcconfig"; path = "Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject.release.xcconfig"; sourceTree = "<group>"; };
-		F948FDA5747D67D97E837610 /* Pods_OrbifoListProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrbifoListProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1B9EA51886C5F48EE051A6A /* libPods-OrbifoListProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrbifoListProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2FECC101E32B10A748BAEB /* Pods-OrbifoListProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrbifoListProject.debug.xcconfig"; path = "Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,7 +85,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F202EEA3A1840691822FA5 /* Pods_OrbifoListProject.framework in Frameworks */,
+				39E8D7B0257E703B008CB025 /* HomeKit.framework in Frameworks */,
+				B12F80B737B98611B125B7C0 /* libPods-OrbifoListProject.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3981B152257F7A9A00A24012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E6AF3DD50728B63E10B146 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +104,9 @@
 		397C3C57257A5074003676CB = {
 			isa = PBXGroup;
 			children = (
+				3989EE99257E45A3005250C3 /* QRCode */,
 				397C3C62257A5075003676CB /* OrbifoListProject */,
+				3981B156257F7A9A00A24012 /* OneSignalNotificationServiceExtension */,
 				397C3C61257A5075003676CB /* Products */,
 				7AABADCBF69BB03FC4E8E7A8 /* Pods */,
 				AF55C0B51B46EEAFCED3FDAB /* Frameworks */,
@@ -64,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				397C3C60257A5075003676CB /* OrbifoListProject.app */,
+				3981B155257F7A9A00A24012 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +125,8 @@
 		397C3C62257A5075003676CB /* OrbifoListProject */ = {
 			isa = PBXGroup;
 			children = (
+				397C2AB3257F62B900C154C3 /* OrbifoListProject.entitlements */,
+				39E8D7AE257E703B008CB025 /* OrbifoListProjectRelease.entitlements */,
 				397C3C9E257A67F5003676CB /* ViewModel */,
 				397C3C98257A6591003676CB /* Cells */,
 				397C3C8B257A5DE5003676CB /* View */,
@@ -98,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				397C3C91257A6064003676CB /* TransactionTableViewController.swift */,
+				3989EEA1257E51D1005250C3 /* QRCodeScannerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,11 +175,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3981B156257F7A9A00A24012 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3981B157257F7A9A00A24012 /* NotificationService.swift */,
+				3981B159257F7A9A00A24012 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		3989EE99257E45A3005250C3 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				3989EE9A257E45B8005250C3 /* Scanner.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		7AABADCBF69BB03FC4E8E7A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				FE2FECC101E32B10A748BAEB /* Pods-OrbifoListProject.debug.xcconfig */,
 				98BAE60C899BD0BF14FCF241 /* Pods-OrbifoListProject.release.xcconfig */,
+				3D0DD3777BD6EB6D3942A5B8 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				3F3746F58B23FB859F744756 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -130,7 +206,9 @@
 		AF55C0B51B46EEAFCED3FDAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F948FDA5747D67D97E837610 /* Pods_OrbifoListProject.framework */,
+				39E8D7AF257E703B008CB025 /* HomeKit.framework */,
+				95B1EC65EF117538812B5C7C /* libPods-OneSignalNotificationServiceExtension.a */,
+				E1B9EA51886C5F48EE051A6A /* libPods-OrbifoListProject.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,16 +224,35 @@
 				397C3C5C257A5075003676CB /* Sources */,
 				397C3C5D257A5075003676CB /* Frameworks */,
 				397C3C5E257A5075003676CB /* Resources */,
-				22627F2BC92E6428B4E8FCE6 /* [CP] Embed Pods Frameworks */,
+				3989EEC7257E693E005250C3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3981B15B257F7A9A00A24012 /* PBXTargetDependency */,
 			);
 			name = OrbifoListProject;
 			productName = OrbifoListProject;
 			productReference = 397C3C60257A5075003676CB /* OrbifoListProject.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3981B154257F7A9A00A24012 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3981B15F257F7A9B00A24012 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				94CB191AD0C94B711F0295CD /* [CP] Check Pods Manifest.lock */,
+				3981B151257F7A9A00A24012 /* Sources */,
+				3981B152257F7A9A00A24012 /* Frameworks */,
+				3981B153257F7A9A00A24012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 3981B155257F7A9A00A24012 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -167,6 +264,9 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					397C3C5F257A5075003676CB = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					3981B154257F7A9A00A24012 = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -185,6 +285,7 @@
 			projectRoot = "";
 			targets = (
 				397C3C5F257A5075003676CB /* OrbifoListProject */,
+				3981B154257F7A9A00A24012 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -194,30 +295,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39919777257FB0B800302F50 /* QRCodeScannerViewController.swift in Resources */,
 				397C3C70257A5077003676CB /* LaunchScreen.storyboard in Resources */,
 				397C3C6D257A5077003676CB /* Assets.xcassets in Resources */,
 				397C3C6B257A5075003676CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3981B153257F7A9A00A24012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22627F2BC92E6428B4E8FCE6 /* [CP] Embed Pods Frameworks */ = {
+		94CB191AD0C94B711F0295CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrbifoListProject/Pods-OrbifoListProject-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9A483B0543B8DCB5F9C2A3C /* [CP] Check Pods Manifest.lock */ = {
@@ -251,15 +365,33 @@
 			files = (
 				397C3C9A257A659E003676CB /* TransactionCell.swift in Sources */,
 				397C3C64257A5075003676CB /* AppDelegate.swift in Sources */,
+				3989EE9B257E45B8005250C3 /* Scanner.swift in Sources */,
 				397C3C92257A6064003676CB /* TransactionTableViewController.swift in Sources */,
 				397C3C7F257A5CBE003676CB /* Pagination.swift in Sources */,
 				397C3C7B257A5097003676CB /* Transactions.swift in Sources */,
 				397C3C66257A5075003676CB /* SceneDelegate.swift in Sources */,
 				397C3CA0257A680B003676CB /* TransactionViewModel.swift in Sources */,
+				3989EEA2257E51D1005250C3 /* QRCodeScannerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3981B151257F7A9A00A24012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3981B158257F7A9A00A24012 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3981B15B257F7A9A00A24012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3981B154257F7A9A00A24012 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 3981B15A257F7A9A00A24012 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		397C3C69257A5075003676CB /* Main.storyboard */ = {
@@ -401,16 +533,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE2FECC101E32B10A748BAEB /* Pods-OrbifoListProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OrbifoListProject/OrbifoListProject.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNN2N35XEF;
 				INFOPLIST_FILE = OrbifoListProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sigma.OrbifoListProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sigma.transactionlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,16 +558,66 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98BAE60C899BD0BF14FCF241 /* Pods-OrbifoListProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OrbifoListProject/OrbifoListProjectRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNN2N35XEF;
 				INFOPLIST_FILE = OrbifoListProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sigma.OrbifoListProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sigma.transactionlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3981B15D257F7A9B00A24012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D0DD3777BD6EB6D3942A5B8 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNN2N35XEF;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sigma.transactionlist.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3981B15E257F7A9B00A24012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3746F58B23FB859F744756 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNN2N35XEF;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sigma.transactionlist.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,6 +640,15 @@
 			buildConfigurations = (
 				397C3C75257A5077003676CB /* Debug */,
 				397C3C76257A5077003676CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3981B15F257F7A9B00A24012 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3981B15D257F7A9B00A24012 /* Debug */,
+				3981B15E257F7A9B00A24012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
