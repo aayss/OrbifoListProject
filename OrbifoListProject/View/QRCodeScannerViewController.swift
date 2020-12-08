@@ -11,6 +11,7 @@ import AVFoundation
 
 class QRCodeScannerViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate, ScannerDelegate
 {
+  
     
     private var scanner: Scanner?
         
@@ -58,6 +59,9 @@ class QRCodeScannerViewController: UIViewController,AVCaptureMetadataOutputObjec
         func scanCompleted(withCode code: String)
         {
             print("QR OKUNDU :  \(code)")
+            
+            
+            
         }
     
     @IBAction func backAction(_ sender: Any) {

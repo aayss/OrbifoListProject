@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let aViewController = QRCodeScannerViewController()
                 UIApplication.shared.keyWindow?.rootViewController?.present(aViewController, animated: true, completion:nil)
                 
+                
             }
         }
         

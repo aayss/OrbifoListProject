@@ -98,7 +98,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="y8x-Mj-tpJ" id="Q2C-J6-Pyq"/>
-                        <segue destination="97E-RT-zQa" kind="presentation" identifier="denemeSegue" modalPresentationStyle="fullScreen" id="47I-Cs-31o"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOa-2x-5z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,9 +163,6 @@
             <point key="canvasLocation" x="2434.7826086956525" y="196.875"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="raG-Ab-EPf"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.down.on.square" catalog="system" width="122" height="128"/>
